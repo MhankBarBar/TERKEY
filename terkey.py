@@ -14,8 +14,6 @@ b ='\033[91m'
 c ='\033[0m'
 os.system('clear')
 slowprint('Buat Munculin Tombol Kanan Kiri Di Termoz')
-slowprint('   Muhamad Royyani')
-slowprint(' https://wa.me/6285693587969')
 slowprint('Silahkan Tunggu...')
 slowprint('Proses..')
 sleep(1)
@@ -30,7 +28,7 @@ sleep(1)
 slowprint('[!] Making setup file..')
 sleep(1)
 
-key = "extra-keys = [['[]','{}','=',':','','<','>'],['()','-','/','HOME','UP','END','PGUP'],['TAB','CTRL','KNTL','ALT','DOWN','RIGHT','PGDN']]"
+key = "extra-keys = [['[]','{}','=',':','','<','>'],['()','-','/','HOME','UP','END','PGUP'],['TAB','CTRL','<?php','ALT','DOWN','RIGHT','PGDN']]"
 kontol = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
 kontol.write(key)
 kontol.close()
