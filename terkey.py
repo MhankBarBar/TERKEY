@@ -1,45 +1,42 @@
-#coding=UTF-8
-import os
+#!/usr/bin/env python
+import os, sys
 from time import sleep
-import socket,struct,time,os,sys
 
-def slowprint(s):
+def kntl(s):
     for c in s + '\n':
         sys.stdout.write(c)
         sys.stdout.flush()
-        time.sleep(0.1 / 2)
+        sleep(0.1 / 2)
 
 a ='\033[92m'
 b ='\033[91m'
 c ='\033[0m'
 os.system('clear')
-slowprint('Buat Munculin Tombol Kanan Kiri Di Termoz')
-slowprint('Silahkan Tunggu...')
-slowprint('Proses..')
+kntl(f'{a}Buat Munculin Tombol Kanan Kiri Di Termoz')
+kntl(f'{b}Silahkan Tunggu...')
+kntl(f'{a}Proses..')
 sleep(1)
-slowprint('[!] making termux properties directory..')
+kntl(f'{b}[{c}!{b}]{c} Membuat Direktori Properti Termux..')
 sleep(1)
 try:
       os.mkdir('/data/data/com.termux/files/home/.termux')
 except:
       pass
-slowprint('[!]Success !')
+kntl(f'{b}[{c}!{b}]{c} Sukses !')
 sleep(1)
-slowprint('[!] Making setup file..')
+kntl(f'{b}[{c}!{b}]{c} Membuat File Pengaturan..')
 sleep(1)
 
-key = "extra-keys = [['[]','{}','=',':','','<','>'],['()','-','/','HOME','UP','END','PGUP'],['TAB','CTRL','<?php','ALT','DOWN','RIGHT','PGDN']]"
+key = "extra-keys = [['if','{}','import','from','BKSP','DEL','>'],['()','-','/','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]"
 kontol = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
 kontol.write(key)
 kontol.close()
 sleep(1)
-slowprint('[!] Success !')
+kntl(f'{b}[{c}!{b}]{c} Sukses !')
 sleep(1)
-slowprint('[!] Setting up..')
+kntl(f'{b}[{c}!{b}]{c} Setting Up..')
 sleep(2)
 os.system('termux-reload-settings')
-slowprint(a+'[!] Successfully !! ^_^hubungi https://wa.me/6285693587969 untuk request atau pertanyaan, Thanks :*')
+kntl(f'{b}[{c}!{b}]{c} Sukses, silahkan jalankan ulang termux anda !')
 
-
-# ini cuma shortcut buat bantu para nub
 # Cuma Recode Punya Si Karjok
