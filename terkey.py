@@ -27,7 +27,7 @@ sleep(1)
 kntl(f'{b}[{c}!{b}]{c} Membuat File Pengaturan..')
 sleep(1)
 
-key = "extra-keys = [['if','{}','import','from','BKSP','DEL','>'],['()','-','/','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]"
+key = extra-keys = "[['DRAWER','QUOTE','APOSTROPHE','ESC','BKSP','DEL','KEYBOARD'],['{}','-','/','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]"
 kontol = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
 kontol.write(key)
 kontol.close()
